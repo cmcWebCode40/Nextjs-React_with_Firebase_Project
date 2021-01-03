@@ -8,11 +8,6 @@
     "lint": "eslint . --ext .ts,.tsx,.js --cache --ignore-pattern .gitignore",
     "start": "next start"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && yarn lint"
-    }
-  },
   "dependencies": {
     "next": "10.0.4",
     "react": "17.0.1",
