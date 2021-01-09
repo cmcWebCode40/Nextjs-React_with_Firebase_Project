@@ -1,0 +1,82 @@
+.container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10.3rem auto;
+}
+
+
+.formWrapper{
+  border: 1px solid rgb(201, 201, 201) ;
+  border-radius: .4rem;
+  padding: .5rem 2rem 2rem   2rem;
+  width: 500px;
+}
+
+
+.image {                  
+  text-align: center;
+}
+
+
+.container form div{
+  margin: 1.5rem .2rem;
+}
+
+.container form div input{
+ width: 100%;
+ padding: .7rem;
+ outline: none;
+ border: .5px solid rgb(201, 201, 201);
+ border-radius: .3rem;
+}
+.container form div input:focus{
+ width: 100%;
+ padding: .7rem;
+ border: #005ea6 1.4px solid;
+ border-radius: .3rem;
+}
+.container form  button{
+ width: 100%;
+ padding: .6rem;
+ outline: none;
+ background-color: #005ea6;
+ border: none;
+ color: #fff;
+ font-size: 1.1rem;
+ border-radius: .3rem;
+ cursor: pointer;
+}
+
+
+
+.footer {
+margin:3rem  0 0 0;
+}
+.ftList{
+  display: flex;
+}
+
+.ftList > li {
+  margin: .3rem 1rem ;
+  list-style: none;
+  text-decoration: underline;
+}
+
+
+.errorMgs{
+display: block;
+background-color: rgb(255, 98, 98);
+color: white;
+padding: .6rem;
+border-radius: .5rem;
+}
+
+@media(max-width:768px){
+  .formWrapper{
+    width: 350px;
+  }
+  
+}
+
