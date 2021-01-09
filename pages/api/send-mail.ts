@@ -1,11 +1,13 @@
+import { NextApiRequest, NextApiResponse } from 'next'
+import sendRegMail from '../../utils/email/sendMail'
 
-import { NextApiRequest, NextApiResponse  } from 'next';
-import {connectToDatabase} from './middlewares/database'
-
-
-export default async (req:NextApiRequest, res:NextApiResponse) => {
-  const { db } = await connectToDatabase();
-  const movies = await db.collection("email_address").find()
-    console.log(movies);
-  res.json(movies);
-};
+export default async (req: NextApiRequest, res: NextApiResponse): Promise<unknown> => {
+  res.statusCode = 200
+  try {
+    const { name, email } = req.body
+    sendRegMail({ name, email })
+    return res.json({ data: 'success' })
+  } catch (error) {
+    res.json({ error: 'Failed' })
+  }
+}
