@@ -1,7 +1,5 @@
-import React from 'react';
+import React from 'react'
 
-const Form = () => (
-  <div />
-);
+const Form = (): JSX.Element => <div />
 
-export default Form;
+export default Form
